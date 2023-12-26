@@ -11,4 +11,4 @@ export default function Home() {
   );
 }
 
-// goto: 11.8  Data Fetching
+// goto: 31 Getting a Collection of Objects
