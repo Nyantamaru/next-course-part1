@@ -11,4 +11,4 @@ export default function Home() {
   );
 }
 
-// goto: 31 Getting a Collection of Objects
+// goto: 39 Installing mySql
