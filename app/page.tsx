@@ -15,4 +15,4 @@ export default async function Home() {
   );
 }
 
-// goto: 67 Setting up React Email
+// goto: 73 Optimizing Images
