@@ -1,18 +1,25 @@
-import Link from 'next/link';
-import ProductCard from './components/ProductCard';
-import { getServerSession } from 'next-auth';
-import { authOptions } from './api/auth/[...nextauth]/route';
+'use client';
 
-export default async function Home() {
-  const session = await getServerSession(authOptions);
-
+export default function Home() {
   return (
-    <main>
-      <h1>Hello {session && <span>{session.user!.name}</span>}</h1>
-      <Link href="/users">Users</Link>
-      <ProductCard />
+    <main className="relative h-screen">
+      <h1 className="font-poppins">Hello world from nextjs</h1>
+      <button
+        onClick={async () => {
+          //lazy loading of lodash by nextJs
+          const _ = (await import('lodash')).default;
+          const users = [
+            { name: 'c' },
+            { name: 'b' },
+            { name: 'a' },
+            { name: 'd' },
+          ];
+          const sorted = _.orderBy(users, ['name']);
+          console.log(sorted);
+        }}
+      >
+        Show
+      </button>
     </main>
   );
 }
-
-// goto: 73 Optimizing Images
